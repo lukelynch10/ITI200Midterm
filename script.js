@@ -3,6 +3,8 @@
 let characterName = "";
 let healthPoints = 100;
 
+//functions
+
 //random number generator 
 function randomNum() {
     const randomDecimal = Math.random();
@@ -11,3 +13,5 @@ function randomNum() {
 }
 
 console.log(randomNum())
+
+//jquery
