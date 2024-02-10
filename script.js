@@ -12,6 +12,7 @@ function randomNum() {
     return randomNumber;
 }
 
+// switch statement to give scenario based on random number
 function scenarios(randomNum){
     switch(randomNum) {
         case 1:
