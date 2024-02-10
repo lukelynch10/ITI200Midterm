@@ -99,7 +99,7 @@ $(function(){
       scenarios(randomNum());
       turnCounter++;
       // end game when turns reach zero
-      if (turnCounter === 10){
+      if (turnCounter === 10 || healthPoints === 0){
         $("#Continue").hide();
       };  
     })
