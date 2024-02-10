@@ -2,6 +2,7 @@
 //variables
 let characterName = "";
 let healthPoints = 100;
+let turnCounter = 0;
 
 //functions
 
@@ -78,9 +79,30 @@ function scenarios(randomNum){
         default:
           console.log("default")
       }
+      
 }
 
-// debugging/ testing
-scenarios(randomNum())
-
 //jquery
+$("#Continue").hide();
+
+$(function(){
+  $("#playnow").click(function(){
+    scenarios(randomNum());
+    $("#Continue").show();
+    $("#playnow").hide();
+    turnCounter++;
+    })
+  });
+
+  $(function(){
+    $("#Continue").click(function(){
+      scenarios(randomNum());
+      turnCounter++;
+      // end game when turns reach zero
+      if (turnCounter === 10){
+        $("#Continue").hide();
+      };  
+    })
+    });
+
+
