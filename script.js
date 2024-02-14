@@ -4,7 +4,7 @@ let characterName = "";
 let healthPoints = 100;
 let turnCounter = 0;
 let damageMultiplier = 1;
-
+let runCount = 0;
 //functions
 
 //random number generators 
@@ -149,7 +149,10 @@ $(function(){
           $("#Continue").hide();
           $("#fight").hide();
           $("#run").hide();
-        };  
+        };
+        if(runCount === 4){
+          $("#run").hide();
+        } 
         })
       });
 
@@ -158,11 +161,15 @@ $(function(){
           scenarios(randomNum());
           damageMultiplier *= 2;
           turnCounter++;
+          runCount++;
         if (turnCounter === 10 || healthPoints <= 0){
           $("#Continue").hide();
           $("#fight").hide();
           $("#run").hide();
         }; 
+        if(runCount === 4){
+          $("#run").hide();
+        };
           })
         });
 
