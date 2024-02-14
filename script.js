@@ -16,7 +16,7 @@ function randomNum() {
 
 function battleDamage() {
   const randomDecimal = Math.random();
-  const randomNumber = Math.floor(randomDecimal * 11) + 1;
+  const randomNumber = Math.floor(randomDecimal * 15) + 1;
   return randomNumber;
 }
 
